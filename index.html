@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To upper case</title>
+</head>
+<body>
+    
+    <p id="welcome"></p>
+
+    <button onclick="greetings()">Click to get a welcome message.</button>
+
+    <script>
+
+       function greetings() {
+
+        var name = prompt("What is your name");
+        var firstAlphabet = name.slice(0,1);
+        var upperCaseFirstAlphabet = firstAlphabet.toUpperCase();
+        var remName = name.slice(1, name.length)
+        var newName = upperCaseFirstAlphabet + remName.toLowerCase();
+        document.getElementById("welcome").innerHTML = 
+        "Hello " +  newName + ", welcome to your journey to a successful career path. ";
+
+       }
+
+
+    </script>
+</body>
+</html>
